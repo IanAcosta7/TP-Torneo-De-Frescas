@@ -7,4 +7,11 @@ public class Espartano extends Humano {
         super(nombre, edad, peso, orinar, beber);
         this.toleranciaExtra = toleranciaExtra;
     }
+
+    @Override
+    public Integer competir() {
+        Integer puntuacion = 0;
+
+        return puntuacion;
+    }
 }

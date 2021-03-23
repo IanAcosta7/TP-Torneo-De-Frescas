@@ -7,4 +7,11 @@ public class Vikingo extends Humano {
         super(nombre, edad, peso, orinar, beber);
         this.bebedorProfesional = bebedorProfesional;
     }
+
+     @Override
+    public Integer competir() {
+         Integer puntuacion = 0;
+
+         return puntuacion;
+    }
 }

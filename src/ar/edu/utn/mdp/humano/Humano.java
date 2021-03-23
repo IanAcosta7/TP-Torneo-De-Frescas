@@ -31,6 +31,8 @@ public abstract class Humano implements Comparable {
         return peso;
     }
 
+    public abstract Integer competir();
+
     @Override
     public int compareTo(Object o) {
         final int BEFORE = -1;
