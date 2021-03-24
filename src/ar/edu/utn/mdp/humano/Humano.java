@@ -4,24 +4,24 @@ public abstract class Humano implements Comparable {
     private String nombre;
     private Integer edad;
     private Integer peso;
+    private Integer aguante;
+    private Integer bebido;
     private Orinar orinar;
     private Beber beber;
 
-    public Humano(String nombre, Integer edad, Integer peso, Orinar orinar, Beber beber) {
+    public Humano(String nombre, Integer edad, Integer peso, Integer aguante, Orinar orinar, Beber beber) {
         this.nombre = nombre;
         this.edad = edad;
         this.peso = peso;
+        this.aguante = aguante;
+        this.bebido = 0;
         this.orinar = orinar;
         this.beber = beber;
     }
 
-    public void orinar() {
-        orinar.orinar();
-    }
+    public abstract Integer orinar();
 
-    public void beber() {
-        beber.beber();
-    }
+    public abstract Integer beber();
 
     public String getNombre() {
         return nombre;
@@ -31,7 +31,30 @@ public abstract class Humano implements Comparable {
         return peso;
     }
 
-    public abstract Integer competir();
+    protected Integer getAguante() { return aguante; }
+
+    protected void setAguante(Integer val) { aguante = val; }
+
+    protected Integer getBebido() { return bebido; }
+
+    protected void setBebido(Integer val) { bebido = val; }
+
+    protected Orinar getOrinar() { return orinar; }
+
+    protected Beber getBeber() { return beber; }
+
+    public void competir() {
+        System.out.println("\nCompetidor: " + nombre);
+        System.out.println("========================");
+        while (aguante > 0) {
+            System.out.println("Bebe " + beber() + " frescas.");
+
+            if (orinar() <= 0) {
+                System.out.println("No aguanta más y va a orinar.");
+            }
+        }
+        System.out.println("========================");
+    }
 
     @Override
     public int compareTo(Object o) {

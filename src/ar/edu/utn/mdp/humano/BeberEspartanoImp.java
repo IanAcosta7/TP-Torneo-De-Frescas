@@ -1,8 +1,11 @@
 package ar.edu.utn.mdp.humano;
 
+import java.util.Random;
+
 public class BeberEspartanoImp implements Beber {
     @Override
-    public void beber() {
-        System.out.println("Espartano bebiendo...");
+    public Integer beber() {
+        Random rand = new Random();
+        return rand.nextInt(3);
     }
 }

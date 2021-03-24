@@ -1,8 +1,11 @@
 package ar.edu.utn.mdp.humano;
 
+import java.util.Random;
+
 public class OrinarVikingoImp implements Orinar {
     @Override
-    public void orinar() {
-        System.out.println("Vikingo orinando...");
+    public Integer orinar() {
+        Random rand = new Random();
+        return rand.nextInt(4);
     }
 }

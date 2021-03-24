@@ -5,12 +5,10 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Enfrentamiento {
-    private ArrayList<Vikingo> equipoVikingo;
-    private ArrayList<Espartano> equipoEspartano;
+    private ArrayList<Humano> equipoVikingo;
+    private ArrayList<Humano> equipoEspartano;
 
     public Enfrentamiento(Integer vikingos, Integer espartanos) {
-        super();
-
         equipoVikingo = new ArrayList<>();
         equipoEspartano = new ArrayList<>();
 
@@ -21,11 +19,11 @@ public class Enfrentamiento {
         Random rand = new Random();
 
         for (int i = 0; i < vikingos; i++) {
-            equipoVikingo.add(new Vikingo(rand.nextInt(), "Vikingo" + (i + 1), rand.nextInt(), rand.nextInt(), new OrinarVikingoImp(), new BeberVikingoImp()));
+            equipoVikingo.add(new Vikingo(rand.nextInt(10), "Vikingo" + (i + 1), rand.nextInt(90), rand.nextInt(140), rand.nextInt(10)));
         }
 
         for (int i = 0; i < espartanos; i++) {
-            equipoEspartano.add(new Espartano(rand.nextInt(), "Espartano" + (i + 1), rand.nextInt(), rand.nextInt(), new OrinarEspartanoImp(), new BeberEspartanoImp()));
+            equipoEspartano.add(new Espartano(rand.nextInt(10), "Espartano" + (i + 1), rand.nextInt(90), rand.nextInt(140), rand.nextInt(10)));
         }
     }
 
@@ -45,21 +43,21 @@ public class Enfrentamiento {
     }
 
     public void presentaEquipos() {
-        for (Vikingo vik : equipoVikingo) {
+        for (Humano vik : equipoVikingo) {
             System.out.println(vik.getNombre() + " peso:" + vik.getPeso());
         }
 
-        for (Espartano esp : equipoEspartano) {
+        for (Humano esp : equipoEspartano) {
             System.out.println(esp.getNombre() + " peso:" + esp.getPeso());
         }
     }
 
     public void enfrentar() {
-        for (Vikingo vik : equipoVikingo) {
+        for (Humano vik : equipoVikingo) {
             vik.competir();
         }
 
-        for (Espartano esp : equipoEspartano) {
+        for (Humano esp : equipoEspartano) {
             esp.competir();
         }
     }
