@@ -3,7 +3,7 @@ package ar.edu.utn.mdp.humano;
 import ar.edu.utn.mdp.humano.beber.Beber;
 import ar.edu.utn.mdp.humano.orinar.Orinar;
 
-public abstract class Humano implements Comparable {
+public class Humano implements Comparable {
     private String nombre;
     private Integer edad;
     private Integer peso;
@@ -22,9 +22,17 @@ public abstract class Humano implements Comparable {
         this.beber = beber;
     }
 
-    public abstract Integer orinar();
+    public Integer orinar() {
+        aguante = aguante - orinar.orinar();
 
-    public abstract Integer beber();
+        return aguante;
+    }
+
+    public  Integer beber() {
+        bebido = bebido + beber.beber();
+
+        return bebido;
+    }
 
     public String getNombre() {
         return nombre;

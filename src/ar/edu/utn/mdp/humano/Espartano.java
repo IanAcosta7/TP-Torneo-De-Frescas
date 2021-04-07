@@ -17,15 +17,6 @@ public class Espartano extends Humano {
 
     @Override
     public Integer orinar() {
-        super.setAguante(super.getAguante() - super.getOrinar().orinar() - toleranciaExtra);
-
-        return getAguante();
-    }
-
-    @Override
-    public Integer beber() {
-        super.setBebido(super.getBebido() + super.getBeber().beber());
-
-        return super.getBebido();
+        return super.orinar() - toleranciaExtra;
     }
 }

@@ -12,16 +12,7 @@ public class Vikingo extends Humano {
     }
 
     @Override
-    public Integer orinar() {
-        super.setAguante(super.getAguante() - super.getOrinar().orinar());
-
-        return getAguante();
-    }
-
-    @Override
     public Integer beber() {
-        super.setBebido(super.getBebido() + super.getBeber().beber() + bebedorProfesional);
-
-        return super.getBebido();
+        return super.beber() + bebedorProfesional;
     }
 }

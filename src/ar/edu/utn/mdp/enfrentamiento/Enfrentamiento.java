@@ -2,11 +2,12 @@ package ar.edu.utn.mdp.enfrentamiento;
 import ar.edu.utn.mdp.humano.*;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class Enfrentamiento {
-    private ArrayList<Humano> equipoVikingo;
-    private ArrayList<Humano> equipoEspartano;
+    private List<Humano> equipoVikingo;
+    private List<Humano> equipoEspartano;
 
     public Enfrentamiento(Integer vikingos, Integer espartanos) {
         equipoVikingo = new ArrayList<>();
