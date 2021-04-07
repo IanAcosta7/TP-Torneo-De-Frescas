@@ -1,4 +1,4 @@
-package ar.edu.utn.mdp.humano;
+package ar.edu.utn.mdp;
 
 import ar.edu.utn.mdp.enfrentamiento.Enfrentamiento;
 

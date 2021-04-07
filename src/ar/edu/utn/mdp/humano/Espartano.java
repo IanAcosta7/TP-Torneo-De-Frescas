@@ -1,5 +1,8 @@
 package ar.edu.utn.mdp.humano;
 
+import ar.edu.utn.mdp.humano.beber.BeberEspartanoImp;
+import ar.edu.utn.mdp.humano.orinar.OrinarEspartanoImp;
+
 import java.util.Random;
 
 public class Espartano extends Humano {

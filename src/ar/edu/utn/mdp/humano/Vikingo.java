@@ -1,5 +1,8 @@
 package ar.edu.utn.mdp.humano;
 
+import ar.edu.utn.mdp.humano.beber.BeberVikingoImp;
+import ar.edu.utn.mdp.humano.orinar.OrinarVikingoImp;
+
 public class Vikingo extends Humano {
     private Integer bebedorProfesional;
 

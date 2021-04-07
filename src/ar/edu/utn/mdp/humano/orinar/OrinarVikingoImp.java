@@ -1,4 +1,4 @@
-package ar.edu.utn.mdp.humano;
+package ar.edu.utn.mdp.humano.orinar;
 
 import java.util.Random;
 

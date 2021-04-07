@@ -1,5 +1,8 @@
 package ar.edu.utn.mdp.humano;
 
+import ar.edu.utn.mdp.humano.beber.Beber;
+import ar.edu.utn.mdp.humano.orinar.Orinar;
+
 public abstract class Humano implements Comparable {
     private String nombre;
     private Integer edad;
